@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  docusaurus:
+    container_name: docusaurus
+    image: httpd:2.4.53-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./website/build:/usr/local/apache2/htdocs/
